@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Signup Form</title>
+  </head>
+  <body>
+  	<div class="container">
+        <h1>Registration Form</h1>
+        <div class="form-group">
+          <label for="sel1">Select event:</label>
+          <select class="form-control" id="sel1">
+            <option>Dramatics</option>
+            <option>Graphic Design</option>
+            <option>Graffiti painting</option>
+            <option>Lone Wolf Quiz</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Name" onblur="namecheck()" onchange="submit()">
+          <small id="name1" style="color: red"></small>
+        </div>
+        <div class="form-group">
+          <label for="college">School/College Name:</label>
+          <input type="text" class="form-control" id="college" placeholder="Enter College" onblur="collegecheck()" onchange="submit()">
+          <small id="college1" style="color: red"></small>
+        </div>
+        <div class="form-group">
+          <label for="rollno">Phone No.:</label>
+          <input type="text" class="form-control" id="phoneno" placeholder="Enter Phone no" onblur="phonecheck()" onchange="submit()">
+          <small id="phoneno1" style="color: red"></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email" placeholder="Enter email" onblur="emailcheck()" onchange="submit()">
+          <small id="email1" style="color: red"></small>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" onblur="pwdcheck()" onchange="submit()">
+          <small id="pwd1" style="color: red"></small>
+        </div>
+        <div class="form-group">
+          <label for="conpwd">Confirm Password:</label>
+          <input type="password" class="form-control" id="conpwd" placeholder="Enter password" onblur="conpwdcheck()" onchange="submit()">
+          <small id="conpwd1" style="color: red"></small>
+        </div>
+        <div class="form-group"  onmouseover="submit()">
+          <button type="submit" class="btn btn-primary" disabled onclick="submit1()" id="submit">Submit</button>
+          <p id="para"></p>
+        </div>
+    </div>
+    <script src="signup.js"></script> 
+  </body>
+</html>
