@@ -1,0 +1,123 @@
+		body
+			{
+				background-image:url("Stars.jpg");
+			}
+			::-webkit-scrollbar 
+			{ 
+    			display: none; 
+			}
+			.sun
+			{
+				width:80px;
+				height:80px;
+				margin: 3em auto;
+				background: url(sunmap.jpg) 0 0 repeat;
+				transition: transform 200ms linear;
+		        transform-style: preserve-3d;
+		        background-size: 160px;
+				position:absolute;
+				top:50%;
+				left: 50%;
+				margin-top: -40px;
+				margin-left: -40px;
+				border-radius: 40px;
+				animation: rotatesun 4s linear infinite;
+				align-content: middle;
+				animation-play-state: running;
+			}
+			.planet1
+			{
+				width:50px;
+				height:50px;
+				margin: 3em auto;
+				background: url(earthmap.jpg) 0 0 repeat;
+				transition: transform 200ms linear;
+		        transform-style: preserve-3d;
+		        background-size: 100px;
+				position:absolute;
+				top:50%;
+				left: 50%;
+				margin-top: -25px;
+				margin-left: -25px;
+				border-radius: 25px;
+				animation: revolve1 30s linear infinite, rotate1 1s linear infinite;
+				align-content: middle;
+				animation-play-state:running;
+			}
+			.planet2
+			{
+				width:70px;
+				height:70px;
+				margin: 3em auto;
+				background: url(planet2map.jpg) 0 0 repeat;
+				transition: transform 200ms linear;
+		        transform-style: preserve-3d;
+		        background-size: 140px;
+				position:absolute;
+				top:50%;
+				left: 50%;
+				margin-top: -35px;
+				margin-left: -35px;
+				border-radius: 35px;
+				animation: revolve2 65s linear infinite, rotate2 3s linear infinite;
+				align-content: middle;	
+				animation-play-state: running;
+
+			}
+			.planet3
+			{
+				width:30px;
+				height:30px;
+				margin: 3em auto;
+				background: url(Planet3map.jpg) 0 0 repeat;
+				transition: transform 200ms linear;
+		        transform-style: preserve-3d;
+		        background-size: 60px;
+				position:absolute;
+				top:50%;
+				left: 50%;
+				margin-top: -15px;
+				margin-left: -15px;
+				border-radius: 15px;
+				animation: revolve3 90s linear infinite, rotate3 10s linear infinite;
+				align-content: middle;	
+				animation-play-state: running;
+			}
+			@keyframes revolve1
+			{
+				from{transform: rotate(0deg) translateX(100px) rotate(0deg);}
+				to{transform: rotate(360deg) translateX(100px) rotate(-360deg);}
+
+			}			
+			@keyframes revolve2
+			{
+				from{transform: rotate(0deg) translateX(175px) rotate(0deg);}
+				to{transform: rotate(360deg) translateX(175px) rotate(-360deg);}
+
+			}
+			@keyframes revolve3
+			{
+				from{transform: rotate(0deg) translateX(250px) rotate(0deg);}
+				to{transform: rotate(360deg) translateX(250px) rotate(-360deg);}
+
+			}
+			@keyframes rotatesun 
+		    {
+		        0% {background-position: 0 0;}
+		        100% {background-position: 160px 0;}
+		    }
+		    @keyframes rotate1 
+		    {
+		        0% {background-position: 0 0;}
+		        100% {background-position: 100px 0;}
+		    }
+		    @keyframes rotate2
+		    {
+		        0% {background-position: 0 0;}
+		        100% {background-position: 140px 0;}
+		    }
+		    @keyframes rotate3
+		    {
+		        0% {background-position: 0 0;}
+		        100% {background-position: 60px 0;}
+		    }
